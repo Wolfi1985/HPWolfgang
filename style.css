@@ -1,0 +1,80 @@
+html body{
+  height: 100%;
+}
+body{
+	font-family: serif;
+    font-size: 90%;
+	font-weight:100;
+    margin: 0em;
+    padding: 0em;
+	background-image: url("img/BarcelonaTrip/Barcelona-28.jpg");
+	background-size:cover;
+    background-repeat:no-repeat;
+    background-position:center center;  
+}
+div{
+	overflow:hidden;
+}
+/*------------------------------------------
+						Nav
+------------------------------------------*/
+nav{
+		width:1038px;
+		height:56px;
+		margin:0px;
+		margin-left:auto;
+		margin-right:auto;
+		border-bottom: 2px solid #ccc;
+		text-transform: uppercase;
+}
+/*------------------------------------------
+						Main
+------------------------------------------*/
+.hidden{
+	display:none;
+}
+.visible{
+	display:block;
+}
+main{
+	height:830px;
+	width:1038px;
+	margin:0px;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wrapper{
+    position: relative;
+}
+.hover{
+	margin: 0px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 188, 212, 0);
+    transition: background-color 0.5s;
+}
+.hover:hover{
+    background-color: rgba(168, 168, 168, 0.5);
+    /*You can tweak with other background properties too (ie: background-image)...*/
+}
+.overlay{
+	height:150px;
+	margin-top:auto;
+	margin-bottom:auto;
+	background-color: rgba(168, 168, 168, 0.3);
+}
+.front{
+	margin:0px;
+	color:antiquewhite;
+	text-align: center;
+	line-height: 150px;
+	font-size: 300%;
+	font-weight: bold;
+	letter-spacing: 0.2em;
+}
+/*------------------------------------------
+				Footer
+------------------------------------------*/
