@@ -1,13 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
 html body{
   height: 100%;
 }
 body{
-	font-family: serif;
+	font-family: 'Open Sans', sans-serif;
     font-size: 90%;
-	font-weight:100;
+	font-weight:900;
     margin: 0em;
     padding: 0em;
-	background-image: url("img/BarcelonaTrip/Barcelona-28.jpg");
+	background-image: url("img/BarcelonaTrip/Barcelona-23.jpg");
 	background-size:cover;
     background-repeat:no-repeat;
     background-position:center center;  
@@ -18,15 +19,73 @@ div{
 /*------------------------------------------
 						Nav
 ------------------------------------------*/
-nav{
-		width:1038px;
-		height:56px;
-		margin:0px;
-		margin-left:auto;
-		margin-right:auto;
-		border-bottom: 2px solid #ccc;
-		text-transform: uppercase;
+.pointer{
+	border-bottom: 2px solid #000000;
 }
+h1{
+	font-family: 'Open Sans', sans-serif;
+	margin:0px;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	letter-spacing: 0.3em;
+	font-size:300%;
+	text-align: center;
+}
+h2{
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 100;
+	color:#FFFFFF;
+	margin:0px;
+	padding-top:0.5em;
+	padding-bottom:0.5em;
+	letter-spacing: 0.3em;
+	font-size:300%;
+	text-align: center;
+	text-transform: uppercase;
+}
+h3{
+	font-family: 'Open Sans', sans-serif;
+	font-weight:100;
+	color:#FFFFFF;
+	margin:0px;
+	padding-top:0.1em;
+	letter-spacing: 0.3em;
+	font-size:800%;
+	text-align: center;
+}
+nav{
+	background-color:white;
+	height:150px;
+	margin:0px;
+}
+.n{
+	width:630px;
+	height:50px;
+	margin:0px;
+	padding-top:0px;
+	padding-top:0px;
+	margin-left:auto;
+	margin-right:auto;
+	text-transform: uppercase;
+}
+nav ul{
+	margin-right: 10px;
+	text-align: center;
+	font-weight: 100;
+}
+nav li{
+	letter-spacing: 0.3em;
+	font-size:110%;
+	list-style-type:none;
+	display:inline-block;
+	*display:inline; /*IE7*/
+    *zoom:1; /*IE7*/
+	margin-right: 30px;
+}
+/*hover effect on nav li*/
+nav li:hover{
+	border-bottom: 2px solid #fff;
+	border-bottom-color:black;cursor:pointer;}
 /*------------------------------------------
 						Main
 ------------------------------------------*/
@@ -37,11 +96,18 @@ nav{
 	display:block;
 }
 main{
+	position:relative;
 	height:830px;
-	width:1038px;
+	width:auto;
 	margin:0px;
 	margin-left:auto;
 	margin-right:auto;
+}
+.headline{
+	position:absolute;
+	bottom:0;
+	height:320px;
+	width:100%;
 }
 .wrapper{
     position: relative;
@@ -64,7 +130,7 @@ main{
 	height:150px;
 	margin-top:auto;
 	margin-bottom:auto;
-	background-color: rgba(168, 168, 168, 0.3);
+	background-color: rgba(255, 255, 255, 0.0);
 }
 .front{
 	margin:0px;
