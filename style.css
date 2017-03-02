@@ -106,7 +106,7 @@ main{
 	position:absolute;
 	top: auto;
 	bottom:0;
-	height:120px;
+	height:310px;
 	width:100%;
 }
 .wrapper{
@@ -134,7 +134,7 @@ main{
 }
 .front{
 	margin:0px;
-	color:antiquewhite;
+	color:black;
 	text-align: center;
 	line-height: 150px;
 	font-size: 300%;
