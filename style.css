@@ -79,7 +79,6 @@ nav li{
 	list-style-type:none;
 	display:inline-block;
 	*display:inline; /*IE7*/
-    *zoom:1; /*IE7*/
 	margin-right: 30px;
 }
 /*hover effect on nav li*/
