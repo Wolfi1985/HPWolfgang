@@ -94,6 +94,7 @@ nav li:hover{
 	display:block;
 }
 main{
+	display:block; /* IE only*/
 	position:relative;
 	height:830px;
 	width:auto;
