@@ -104,8 +104,9 @@ main{
 }
 .headline{
 	position:absolute;
+	top: auto;
 	bottom:0;
-	height:320px;
+	height:120px;
 	width:100%;
 }
 .wrapper{
