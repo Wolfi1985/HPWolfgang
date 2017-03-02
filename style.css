@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400');
+/*http://www.northlandscapes.com/de/*/
 html body{
   height: 100%;
 }
 body{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
     font-size: 90%;
-	font-weight:900;
+	font-weight:400;
     margin: 0em;
     padding: 0em;
 	background-image: url("img/BarcelonaTrip/Barcelona-23.jpg");
@@ -23,7 +26,8 @@ div{
 	border-bottom: 2px solid #000000;
 }
 h1{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 400;
 	margin:0px;
 	padding-top:0.5em;
 	padding-bottom:0.5em;
@@ -32,8 +36,8 @@ h1{
 	text-align: center;
 }
 h2{
-	font-family: 'Open Sans', sans-serif;
-	font-weight: 100;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 300;
 	color:#FFFFFF;
 	margin:0px;
 	padding-top:0.5em;
@@ -44,7 +48,7 @@ h2{
 	text-transform: uppercase;
 }
 h3{
-	font-family: 'Open Sans', sans-serif;
+	font-family: 'Montserrat', sans-serif;
 	font-weight:100;
 	color:#FFFFFF;
 	margin:0px;
@@ -71,10 +75,10 @@ nav{
 nav ul{
 	margin-right: 10px;
 	text-align: center;
-	font-weight: 100;
+	font-weight: 300;
 }
 nav li{
-	letter-spacing: 0.3em;
+	letter-spacing: 0.2em;
 	font-size:110%;
 	list-style-type:none;
 	display:inline-block;
@@ -82,6 +86,7 @@ nav li{
 }
 /*hover effect on nav li*/
 nav li:hover{
+	font-weight: 400;
 	border-bottom: 2px solid #fff;
 	border-bottom-color:black;cursor:pointer;}
 /*------------------------------------------
@@ -94,7 +99,6 @@ nav li:hover{
 	display:block;
 }
 main{
-	display:block; /* IE only*/
 	position:relative;
 	height:830px;
 	width:auto;
