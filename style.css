@@ -13,10 +13,10 @@ body{
     padding: 0em;
 }
 .background{
-	transition: background-image 1s ease-in-out;
+	transition:background-image 1s ease-in-out;
 	background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;  
+    background-position:center center;  
 }
 /*.Home { background-image: url(img/BarcelonaTrip/Barcelona-23.jpg)}
 .Portfolio { background-image: url(img/BarcelonaTrip/Barcelona-28.jpg)}*/
