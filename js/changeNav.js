@@ -29,7 +29,7 @@ function initHome(){
 	$('main').empty();
 	$('main').append( "<div id='headline'><h2>Wolfgang|Heindl</h2><h3>Photography</h3></div>");
 	$('main').append("<div class='leftArrow slider'></div><div class='rightArrow slider'></div>");
-	$('main').css("background-image", "url(img/BarcelonaTrip/"+curCount+".jpg");  
+	$('main').css("background", "url(img/BarcelonaTrip/"+curCount+".jpg");  
 };
 function initPortfolio(){
 	$('main').empty();
@@ -56,6 +56,6 @@ $(function slider() {
 				curCount=0;
 			}
 		}
-		$('main').css("background-image", "url(img/BarcelonaTrip/"+curCount+".jpg");  
+		$('main').css("background", "url(img/BarcelonaTrip/"+curCount+".jpg");  
     });
 });
