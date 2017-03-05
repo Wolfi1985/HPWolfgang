@@ -104,7 +104,7 @@ nav li:hover{
 }
 main{
 	position:relative;
-	display:block;	/*IE only*/
+	/*display:block;	/*IE only*/
 	height:820px;
 	width:auto;
 	margin:0px;
