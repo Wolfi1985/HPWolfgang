@@ -14,6 +14,9 @@ body{
 }
 .background{
 	transition: background-image 1s ease-in-out;
+    -webkit-transition: background-image 1s ease-in-out;
+    -moz-transition: background-image 1s ease-in-out;
+    -ms-transition: background-image 1s ease-in-out;
 	background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;  
@@ -33,11 +36,13 @@ h1{
 	font-family: 'Montserrat', sans-serif;
 	font-weight: 400;
 	margin:0px;
-	padding-top:0.5em;
+	padding-top:0.2em;
+	padding-left:20px;
 	padding-bottom:0.5em;
 	letter-spacing: 0.3em;
-	font-size:300%;
-	text-align: center;
+	font-size:200%;
+	text-align: left;
+	opacity:0.7;
 }
 h2{
 	font-family: 'Montserrat', sans-serif;
@@ -62,9 +67,15 @@ h3{
 	text-align: center;
 }
 nav{
+	position:fixed;
+	top:0;
 	background-color:white;
-	height:150px;
+	height:50px;
 	margin:0px;
+	top: auto;
+	width:100%;
+	z-index: 5;
+	opacity:0.7;
 }
 .n{
 	width:630px;
@@ -105,7 +116,7 @@ nav li:hover{
 main{
 	position:relative;
 	display:block;	/*IE only*/
-	height:820px;
+	height:955px;
 	width:auto;
 	margin:0px;
 	margin-left:auto;
@@ -118,7 +129,7 @@ main{
     top: 50%;
     left: 60px;
     margin-top: -37px;
-    background: url("icons/leftArrow.png") center center no-repeat;
+    background: url("icons/leftArrow1.png") center center no-repeat;
     cursor: pointer;
     z-index: 2;
     opacity: 1;
@@ -134,7 +145,7 @@ main{
     top: 50%;
     right:60px;
     margin-top: -37px;
-    background: url("icons/rightArrow.png") center center no-repeat;
+    background: url("icons/rightArrow1.png") center center no-repeat;
     cursor: pointer;
     z-index: 2;
     opacity: 1;
@@ -162,7 +173,6 @@ main{
 }
 .hover:hover{
     background-color: rgba(168, 168, 168, 0.5);
-    /*You can tweak with other background properties too (ie: background-image)...*/
 }
 .overlay{
 	height:150px;
@@ -171,5 +181,62 @@ main{
 	background-color: rgba(255, 255, 255, 0.0);
 }
 /*------------------------------------------
+				Portfolio
+------------------------------------------*/
+.portfolio{
+	height:955px;
+}
+.pSlider{
+	margin:0px;
+	height:200px;
+	width:1500px;
+	background:#fff;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:20px;
+}
+.first{
+	margin:0px;
+	height:200px;
+	width:295px;
+	background:#efefef;
+	opacity:1;
+	display:inline-block;
+}
+.first p{
+	margin:0px;
+	font-family: 'Montserrat', sans-serif;
+	color:black;
+	font-size: 100%;
+	font-weight:900;
+	text-align: center;
+	line-height: 50px;
+	word-wrap:break-word;
+}
+h4{
+	margin:0px;
+	font-family: 'Montserrat', sans-serif;
+	color:black;
+	font-size: 200%;
+	font-weight:900;
+	text-align: center;
+	line-height: 150px;
+	word-wrap:break-word;
+}
+.next{
+	margin:0px;
+	height:200px;
+	width:295px;
+	background:#efefef;
+	display:inline-block;
+}
+/*------------------------------------------
 				Footer
 ------------------------------------------*/
+
+/*------------------------------------------
+				Media Screens
+------------------------------------------*/
+@media screen and (max-width:1320px){
+	h1{display:none;}
+}

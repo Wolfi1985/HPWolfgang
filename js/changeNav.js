@@ -26,23 +26,17 @@ $(function () {
 });
 function initHome(){
 	curCount=0;
-	$('main').empty();
 	$('main').append( "<div id='headline'><h2>Wolfgang|Heindl</h2><h3>Photography</h3></div>");
 	$('main').append("<div class='leftArrow slider'></div><div class='rightArrow slider'></div>");
 	$('main').css("background-image", "url('img/BarcelonaTrip/"+curCount+".jpg')");  
+	initPortfolio();
 };
 function initPortfolio(){
-	$('main').empty();
-};
-function initBlog(){
-$('main').empty();
-};
-function initAbout(){
-	$('main').empty();
-};
-function initContact(){
-	$('main').empty();
-};
+	for(var i=0;i<4;i++){
+		$('#fcbarcelona'+i).css("background-image", "url('img/fcbarcelona/fcbarcelona"+i+".jpg')"); 
+		$('#barcelona2017'+i).css("background-image", "url('img/barcelona2017/barcelona2017"+i+".jpg')"); 
+	}
+}
 $(function slider() {
     $('.slider').click(function () {
 		if( $(this).is('.leftArrow') ) {
