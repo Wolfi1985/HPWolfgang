@@ -29,7 +29,7 @@ function initHome(){
 	$('main').empty();
 	$('main').append( "<div id='headline'><h2>Wolfgang|Heindl</h2><h3>Photography</h3></div>");
 	$('main').append("<div class='leftArrow slider'></div><div class='rightArrow slider'></div>");
-	$('main').css("backgroundImage", "url(img/BarcelonaTrip/0.png");  
+	$('main').css("backgroundImage", "url(img/BarcelonaTrip/"+curCount+".png");  
 };
 function initPortfolio(){
 	$('main').empty();
