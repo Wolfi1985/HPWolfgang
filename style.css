@@ -11,18 +11,22 @@ body{
 	font-weight:400;
     margin: 0em;
     padding: 0em;
-	background-image: url("img/BarcelonaTrip/Barcelona-23.jpg");
+}
+.background{
+	transition: background-image 1s ease-in-out;
 	background-size:cover;
     background-repeat:no-repeat;
     background-position:center center;  
 }
+/*.Home { background-image: url(img/BarcelonaTrip/Barcelona-23.jpg)}
+.Portfolio { background-image: url(img/BarcelonaTrip/Barcelona-28.jpg)}*/
 div{
 	overflow:hidden;
 }
 /*------------------------------------------
 						Nav
 ------------------------------------------*/
-.pointer{
+.active{
 	border-bottom: 2px solid #000000;
 }
 h1{
@@ -42,7 +46,7 @@ h2{
 	margin:0px;
 	padding-top:0.5em;
 	padding-bottom:0.5em;
-	letter-spacing: 0.3em;
+	letter-spacing: 0.1em;
 	font-size:300%;
 	text-align: center;
 	text-transform: uppercase;
@@ -101,13 +105,42 @@ nav li:hover{
 main{
 	position:relative;
 	display:block;	/*IE only*/
-	height:830px;
+	height:820px;
 	width:auto;
 	margin:0px;
 	margin-left:auto;
 	margin-right:auto;
 }
-.headline{
+.leftArrow{
+	width: 70px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    left: 60px;
+    margin-top: -37px;
+    background: url("icons/leftArrow.png") center center no-repeat;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity ease .25s;
+}
+.leftArrow:hover,.rightArrow:hover{
+	    opacity: 0.5;
+}
+.rightArrow{
+	width: 70px;
+    height: 90px;
+    position: absolute;
+    top: 50%;
+    right:60px;
+    margin-top: -37px;
+    background: url("icons/rightArrow.png") center center no-repeat;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity ease .25s;
+}
+#headline{
 	position:absolute;
 	top: auto;
 	bottom:0;
