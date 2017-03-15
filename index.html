@@ -3,51 +3,125 @@
 	<head>
 		<meta charset="utf-8">
     	<link rel="stylesheet" href="style.css" type="text/css" />
+		<link rel="stylesheet" href="slider/slider.css" type="text/css" />
+		
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+		<script src="slider/slider.js"></script>
 		<script src="js/initialize.js"></script>
 		<script src="js/changeNav.js"></script>
-		<script src="js/changeBackground.js"></script>
+		<script src="js/scroll.js"></script>
 		<title>Photography by Wolfgang Heindl</title>
 	</head>
 	<nav>
-		<div class="n">
+		<div  class="n">
 			<ul>
-				<li class="active clickMe">Home</li>
-				<li class="clickMe">Portfolio</li>
-				<li class="clickMe">Blog</li>
-				<li class="clickMe">About</li>
-				<li class="clickMe">Contact</li>
+				<a id="home" class="active">Home</a>
+				<a id="portfolio">Portfolio</a>
+				<a >About</a>
+				<a >Contact</a>
 			</ul>
 		</div>
 	</nav>
 	<body >
-		<main class="background Home">
+		<div class="dim"></div>
+		<div class="over-div" > <img src="img/BarcelonaTrip/0.jpg" /></div>
+		<main id="homeSection" class="background Home">
 			<h1>Wolfgang Heindl</h1>
 		</main>
-		<div class="portfolio">
+		<div id="portfolioSection" class="portfolio">
 			<div class="barcelona pSlider">
-				<div class="first"><h4>Barcelona</h4><p>Februar 2017</p></div>
-				<div id="barcelona20170"class="next"></div>
-				<div id="barcelona20171"class="next"></div>
-				<div id="barcelona20172"class="next"></div>
-				<div id="barcelona20173"class="next"></div>
+				<h4>Barcelona</h4><p>Februar 2017</p>
+				<ul class="slides">
+					<li class=slide><img src="img/BarcelonaTrip/0.jpg" /></li>
+					<li class=slide><img src="img/BarcelonaTrip/1.jpg" /></li>
+					<li class=slide><img src="img/BarcelonaTrip/2.jpg" /></li>
+					<li class=slide><img src="img/BarcelonaTrip/4.jpg" /></li>
+					<li class=slide><img src="img/BarcelonaTrip/5.jpg" /></li>
+					<li class=slide><img src="img/BarcelonaTrip/6.jpg" /></li>
+					<li class=slide><img src="img/BarcelonaTrip/7.jpg" /></li>
+					<li class=slide><img src="img/BarcelonaTrip/8.jpg" /></li>
+				</ul>
+				<div class="slideMenu" data-sc="0">
+					<div class="bLeft"></div>
+					<div class="bRight"></div>
+				</div>
 			</div>
-			<div class="fcbarcelona pSlider">
-				<div class="first"><h4>FC Barcelona</h4><p>Februar 2017</p></div>
-				<div id="fcbarcelona0"class="next"></div>
-				<div id="fcbarcelona1"class="next"></div>
-				<div id="fcbarcelona2"class="next"></div>
-				<div id="fcbarcelona3"class="next"></div>
-			</div>
-			<div class="portugal pSlider">
-				<div class="first"><h4>Portugal</h4><p>September 2017</p></div>
-				<div class="next"></div>
-				<div class="next"></div>
-				<div class="next"></div>
-				<div class="next"></div>
-			</div>
+
+			<div class="fcb pSlider">
+				<h4>FC Barcelona</h4><p>Februar 2017</p>
+				<ul class="slides">
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-0.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-2.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-3.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-4.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-5.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-6.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-7.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-8.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-9.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-10.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-11.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-12.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-13.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-14.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-15.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-16.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-17.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-18.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-19.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-20.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-21.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-22.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-23.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-24.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-0.jpg" /></li>
+				</ul>
+				<div class="slideMenu" data-sc="0">
+					<div class="bLeft"></div>
+					<div class="bRight"></div>
+				</div>
+			</div >
+				<div class="port pSlider">
+				<h4>Algarve</h4><p>September 2016</p>
+				<ul class="slides">
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-0.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-2.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-3.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-4.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-5.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-6.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-7.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-8.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-9.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-10.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-11.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-12.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-13.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-14.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-15.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-16.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-17.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-18.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-19.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-20.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-21.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-22.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-23.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-24.jpg" /></li>
+					<li class=slide><img src="img/fcbarcelona/FC Barcelona-0.jpg" /></li>
+				</ul>
+				<div class="slideMenu" data-sc="0">
+					<div class="bLeft"></div>
+					<div class="bRight"></div>
+				</div>
+			</div >
 		</div>
-		<script>initHome();</script>
+		<script>
+			$( document ).ready(function() {
+				initHome();
+			});
+		</script>
+
 	</body>
 	<footer>
 		

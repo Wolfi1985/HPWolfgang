@@ -92,15 +92,17 @@ nav ul{
 	text-align: center;
 	font-weight: 300;
 }
-nav li{
+nav a{
+	color:black;
 	letter-spacing: 0.2em;
 	font-size:110%;
-	list-style-type:none;
+	text-decoration:none;
 	display:inline-block;
 	margin-right: 30px;
 }
+
 /*hover effect on nav li*/
-nav li:hover{
+nav a:hover{
 	font-weight: 400;
 	border-bottom: 2px solid #fff;
 	border-bottom-color:black;cursor:pointer;}
@@ -116,7 +118,7 @@ nav li:hover{
 main{
 	position:relative;
 	display:block;	/*IE only*/
-	height:955px;
+	height:974px;
 	width:auto;
 	margin:0px;
 	margin-left:auto;
@@ -151,6 +153,7 @@ main{
     opacity: 1;
     transition: opacity ease .25s;
 }
+
 #headline{
 	position:absolute;
 	top: auto;
@@ -184,17 +187,11 @@ main{
 				Portfolio
 ------------------------------------------*/
 .portfolio{
-	height:955px;
+	margin-top:0px;
+	padding-top:50px;
+	height:auto;
 }
-.pSlider{
-	margin:0px;
-	height:200px;
-	width:1500px;
-	background:#fff;
-	margin-left:auto;
-	margin-right:auto;
-	margin-top:20px;
-}
+
 .first{
 	margin:0px;
 	height:200px;
@@ -220,8 +217,8 @@ h4{
 	font-size: 200%;
 	font-weight:900;
 	text-align: center;
-	line-height: 150px;
 	word-wrap:break-word;
+	padding:0px;
 }
 .next{
 	margin:0px;
