@@ -3,7 +3,21 @@ var toggleShow = function(){
     element.classList.toggle("photo-caption-show");
 }
 
-	
+$(function() {
+  var img = $('.slide');
+  img.each(function() {
+    var $this = $(this),
+        width = $this.children("img").prop('naturalWidth'),
+        height = $this.children("img").prop('naturalHeight');
+    if (width < height) {
+      $this.children("img").addClass('portrait');
+    } else {
+      $this.children("img").addClass('landscape');
+    }
+  });
+});
+
+
 
 $(function(){
 	var width=305;
@@ -39,9 +53,7 @@ $(function(){
 	});
 	
 	$('.bRight').on('click',function(){
-		
 		curSlide=$(this).parent().data('sc');
-		console.log("jetzt:"+curSlide);
 		var $slider=$(this).parent().parent();
 		var $slidercontainer = $slider.children('.slides');
 		var $slides = $slidercontainer.children();
@@ -68,11 +80,23 @@ $(function(){
 		$('.over-div').css('z-index','10');
 
 		var image = document.createElement("IMG");
-		image.alt = "FCB"
+		image.alt = "Image not able to be loaded"
 		image.setAttribute('class', 'photo');
 		image.src=$(this).children("img").attr("src");
 		$('.over-div').html(image);
+		
+		var $this = $('.over-div'),
+        width = $this.children("img").prop('naturalWidth'),
+        height = $this.children("img").prop('naturalHeight');
+    	if (width < height) {
+      		$this.children("img").addClass('portrait');
+			$this.css('margin-top','-480px');
+    	} else {
+			$this.children("img").addClass('landscape');
+			$this.css('margin-top','-270px');
+    	}
 	});
+	
 	$('.over-div').on('click',function(){
 		$('.dim').removeClass('overlay');
 		$('.over-div').css('visibility','hidden');
