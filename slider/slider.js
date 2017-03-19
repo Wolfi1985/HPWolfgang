@@ -3,7 +3,8 @@ var toggleShow = function(){
     element.classList.toggle("photo-caption-show");
 }
 
-$(function() {
+// check if photos are in portrait or landscape format
+$( document ).ready(function() {
   var img = $('.slide');
   img.each(function() {
     var $this = $(this),
@@ -17,9 +18,25 @@ $(function() {
   });
 });
 
+// placing bullets in slide Menu
+$( document ).ready(function() {
+	var $portfolio=$('.portfolio');
+	var $slideMenu=$('.portfolio').children().children('.slideMenu');
 
+	$portfolio.each( function(){
+    	$('.bRight').before('<ul class="slideNav"></ul>');
+	});
+	$slideMenu.parent().children('.slides').each(function(){ 
+		var len=$(this).children('.slide').length;
+		while(len>=0){
+			$(this).parent().children('.slideMenu').children('.slideNav').append('<li class="bullet"></li>');
+			len-=1;
+		}
+	});
+});
 
-$(function(){
+// slide images on button click
+$( document ).ready(function() {
 	var width=305;
 	var animationSpeed=1000;
 	var curSlide;
@@ -51,7 +68,7 @@ $(function(){
 		}
 		
 	});
-	
+	// slide to the right
 	$('.bRight').on('click',function(){
 		curSlide=$(this).parent().data('sc');
 		var $slider=$(this).parent().parent();
@@ -74,6 +91,7 @@ $(function(){
 			}
 		}
 	});
+	// overlay on image click
 	$('.slide').on('click',function(){
 		$('.dim').addClass('overlay');
 		$('.over-div').css('visibility','visible');
@@ -96,7 +114,7 @@ $(function(){
 			$this.css('margin-top','-270px');
     	}
 	});
-	
+	// on second click set to background
 	$('.over-div').on('click',function(){
 		$('.dim').removeClass('overlay');
 		$('.over-div').css('visibility','hidden');

@@ -11,6 +11,13 @@ body{
 	font-weight:400;
     margin: 0em;
     padding: 0em;
+	/*background-color:#c5d5cb;*/
+	background: #bdbdbd; /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(white,#bdbdbd); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(white, #bdbdbd); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(white, #bdbdbd); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(white, #bdbdbd); /* Standard syntax */
+	
 }
 .background{
 	transition: background-image 1s ease-in-out;
@@ -21,8 +28,6 @@ body{
     background-repeat: no-repeat;
     background-position: center center;  
 }
-/*.Home { background-image: url(img/BarcelonaTrip/Barcelona-23.jpg)}
-.Portfolio { background-image: url(img/BarcelonaTrip/Barcelona-28.jpg)}*/
 div{
 	overflow:hidden;
 }
@@ -123,6 +128,7 @@ main{
 	margin:0px;
 	margin-left:auto;
 	margin-right:auto;
+	background-image: url('img/Front.jpg');
 }
 .leftArrow{
 	width: 70px;
