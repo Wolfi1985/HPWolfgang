@@ -192,6 +192,21 @@ main{
 /*------------------------------------------
 				Portfolio
 ------------------------------------------*/
+
+#aboutSection{
+	margin-top:75px;
+	background-color:white;
+	font-size: 90%;
+	font-weight:400;
+	color:grey;
+}
+#aboutSection h3{
+	background-color:white;
+	font-size: 90;
+	font-weight:100;
+	color:grey;
+}
+
 .portfolio{
 	margin-top:0px;
 	padding-top:50px;

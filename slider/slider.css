@@ -116,6 +116,19 @@ h4{
   	transform: translate(10%, 0%);
 	text-align: center;
 }
+.folNr{
+	display: inline-block;
+	padding: 0px;
+	overflow:hidden;
+	width:75%;
+	height:90%;
+	transform: translate(10%, 0%);
+	text-align: center;
+}
+.folNr p{
+	margin:0px;
+	padding: 0px;
+}
 .slideMenu ul {
 	display: inline-block;
 	margin: 0px 0;
@@ -128,9 +141,16 @@ h4{
 	list-style-position: inside;
 	background: white;
 	list-style-position:inside;
-    border: 1px solid grey;
-    width: 4px;
-    height: 4px;
-	margin-left:5px;
+	list-style-type: disc;
+	border: 1px solid grey;
+    width: 6px;
+    height: 6px;
+	margin-left:6px;
 	border-radius:50%;
+}
+.activeBullet{
+	border: 5px solid grey;
+}
+li.inactiveBullet{
+	border: 1px solid grey;
 }

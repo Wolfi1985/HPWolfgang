@@ -15,12 +15,32 @@ $( document ).ready(function() {
     } else {
       $this.children("img").addClass('landscape');
     }
-  });
-});
+  })
 
-// placing bullets in slide Menu
-$( document ).ready(function() {
-	var $portfolio=$('.portfolio');
+
+// slide images on button click
+	var width=$(".slide").width()+5;
+	var animationSpeed=1000;
+	var curSlide;
+	var numSlides=Math.floor($(".pSlider").width()/width);
+
+	if($(".pSlider").width()%width>=0.5){
+		numSlides+=1;
+		console.log(numSlides);
+	}
+	var pSlideWidth;
+	var slidecount=0;
+	setSlideNumber();
+	$(window).resize(setSlideNumber);
+	
+	// setting number of slides dynamically
+	function setSlideNumber() {
+		pSlideWidth=$(".pSlider").width();
+		numSlides=Math.floor(pSlideWidth / width);
+	};
+	
+		// placing bullets in slide Menu
+	/*var $portfolio=$('.portfolio');
 	var $slideMenu=$('.portfolio').children().children('.slideMenu');
 
 	$portfolio.each( function(){
@@ -28,26 +48,42 @@ $( document ).ready(function() {
 	});
 	$slideMenu.parent().children('.slides').each(function(){ 
 		var len=$(this).children('.slide').length;
+		var count=0;	// counter to bind bullet to image
 		while(len>=0){
+			var selectedItemSrc = $(this).children('.slide').attr('src');
 			$(this).parent().children('.slideMenu').children('.slideNav').append('<li class="bullet"></li>');
 			len-=1;
+
 		}
 	});
-});
-
-// slide images on button click
-$( document ).ready(function() {
-	var width=305;
-	var animationSpeed=1000;
-	var curSlide;
-	var numSlides=5;
 	
+	function setActiveBullet(){
+		$('.portfolio').children().children('.slideMenu').children('.slideNav').each(function(){ 
+			console.log($(this).children('.slide'));
+				//.addClass('activeBullet');
+		});
+	};*/
 	
 
+		var $slideMenu=$('.portfolio').children().children('.slideMenu');
+	
+		$slideMenu.each(function(){
+			var len=$(this).parent().children('.slides').children('.slide').length;
+			var start=$(this).data('sc');
+			var end;
+			start+=1;
+			end=start+Math.floor(numSlides);
+			$(this).children('.folNr').append('<p>'+start+' bis '+end+' von '+ len + '</p>');
+		
+		});
+		
+
+
+	
+	
 	// slide to the left
 	$('.bLeft').on('click',function(){
 		curSlide=$(this).parent().data('sc');
-		console.log("jetzt:"+curSlide);
 		var $slider=$(this).parent().parent();
 		var $slidercontainer = $slider.children('.slides');
 		var $slides = $slidercontainer.children();
@@ -61,12 +97,19 @@ $( document ).ready(function() {
 			$(this).parent().children('.bRight').css('visibility','visible');
 			$slidercontainer.animate({'margin-left':'+='+width},animationSpeed);
 			$(this).parent().data('sc',curSlide-=1);
-			console.log(curSlide);
 			if(curSlide<=0){
 				$(this).css('visibility','hidden');
 			}
+			var len=$(this).parent().parent().children('.slides').children('.slide').length;
+			var start=$(this).parent().data('sc');
+			var end;
+			start+=1;
+			end=start+Math.floor(numSlides);
+			if(end<=len){
+				$(this).parent().children('.folNr').text(start+' bis '+end+' von '+ len);
+			}
 		}
-		
+		//resetting bullets to left
 	});
 	// slide to the right
 	$('.bRight').on('click',function(){
@@ -85,11 +128,19 @@ $( document ).ready(function() {
 			$(this).parent().children('.bLeft').css('visibility','visible');
 			$slidercontainer.animate({'margin-left':'-='+width},animationSpeed);
 			$(this).parent().data('sc',curSlide+=1);
-			console.log(curSlide);
 			if(curSlide>=(length-numSlides)){
 				$(this).css('visibility','hidden');
 			}
+			var len=$(this).parent().parent().children('.slides').children('.slide').length;
+			var start=$(this).parent().data('sc');
+			var end;
+			start+=1;
+			end=start+Math.floor(numSlides);
+			if(end<=len){
+				$(this).parent().children('.folNr').text(start+' bis '+end+' von '+ len);
+			}
 		}
+		//resetting bullets to right
 	});
 	// overlay on image click
 	$('.slide').on('click',function(){
