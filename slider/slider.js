@@ -1,11 +1,7 @@
-var toggleShow = function(){
-    var element = document.querySelector(".photo-caption");
-    element.classList.toggle("photo-caption-show");
-}
-
 // check if photos are in portrait or landscape format
 $( document ).ready(function() {
-  var img = $('.slide');
+  	var img = $('.slide');
+	var width = $('.slide').width()+5;
   img.each(function() {
     var $this = $(this),
         width = $this.children("img").prop('naturalWidth'),
@@ -16,17 +12,23 @@ $( document ).ready(function() {
       $this.children("img").addClass('landscape');
     }
   })
-
+  
+  // set size of pSlider
+  $('.pSlider').each(function(){
+	  	var numSlides = $(this).children('.slides').children().length;
+	  	var thisLen =numSlides*305;
+		var $curpSlider = $(this).children('.slides');
+	  	$curpSlider.css('width',thisLen);
+  });
 
 // slide images on button click
-	var width=$(".slide").width()+5;
+	/*var width=$(".slide").width()+5;
 	var animationSpeed=1000;
 	var curSlide;
 	var numSlides=Math.floor($(".pSlider").width()/width);
 
 	if($(".pSlider").width()%width>=0.5){
 		numSlides+=1;
-		console.log(numSlides);
 	}
 	var pSlideWidth;
 	var slidecount=0;
@@ -37,7 +39,7 @@ $( document ).ready(function() {
 	function setSlideNumber() {
 		pSlideWidth=$(".pSlider").width();
 		numSlides=Math.floor(pSlideWidth / width);
-	};
+	};*/
 	
 		// placing bullets in slide Menu
 	/*var $portfolio=$('.portfolio');
@@ -65,7 +67,7 @@ $( document ).ready(function() {
 	};*/
 	
 
-		var $slideMenu=$('.portfolio').children().children('.slideMenu');
+		/*var $slideMenu=$('.portfolio').children().children('.slideMenu');
 	
 		$slideMenu.each(function(){
 			var len=$(this).parent().children('.slides').children('.slide').length;
@@ -75,14 +77,57 @@ $( document ).ready(function() {
 			end=start+Math.floor(numSlides);
 			$(this).children('.folNr').append('<p>'+start+' bis '+end+' von '+ len + '</p>');
 		
-		});
+		});*/
 		
+	var start,stop;
+	$(".slides").draggable({
 
+		axis: "x",
+		start: function(event, ui) {
+			$(".slide").unbind("click");
+		},
+		stop: function(event, ui) {
+			 setTimeout(function() {
+				$('.slide').on('click',function(){
+					$('.dim').addClass('overlay');
+					$('.over-div').css('visibility','visible');
+					$('.over-div').css('z-index','10');
+
+					var image = document.createElement("IMG");
+					image.alt = "Image not able to be loaded"
+					image.setAttribute('class', 'photo');
+					image.src=$(this).children("img").attr("src");
+					$('.over-div').html(image);
+
+					var $this = $('.over-div'),
+					width = $this.children("img").prop('naturalWidth'),
+					height = $this.children("img").prop('naturalHeight');
+					if (width < height) {
+						$this.children("img").addClass('portrait');
+						$this.css('margin-top','-480px');
+					} else {
+						$this.children("img").addClass('landscape');
+						$this.css('margin-top','-270px');
+					}
+				});
+			}, 300);
+		},
+		drag: function(event, ui){
+			var psliderL =$(this).parent().width();
+			var maxLeft =$(this).width()*-1+psliderL;
+		  	if(ui.position.left < maxLeft ){        
+				ui.position.left =maxLeft-5;
+			}
+			if(ui.position.left>0){
+				ui.position.left =0;
+			}
+    	}
+	});
 
 	
 	
 	// slide to the left
-	$('.bLeft').on('click',function(){
+	/*$('.bLeft').on('click',function(){
 		curSlide=$(this).parent().data('sc');
 		var $slider=$(this).parent().parent();
 		var $slidercontainer = $slider.children('.slides');
@@ -99,14 +144,6 @@ $( document ).ready(function() {
 			$(this).parent().data('sc',curSlide-=1);
 			if(curSlide<=0){
 				$(this).css('visibility','hidden');
-			}
-			var len=$(this).parent().parent().children('.slides').children('.slide').length;
-			var start=$(this).parent().data('sc');
-			var end;
-			start+=1;
-			end=start+Math.floor(numSlides);
-			if(end<=len){
-				$(this).parent().children('.folNr').text(start+' bis '+end+' von '+ len);
 			}
 		}
 		//resetting bullets to left
@@ -131,17 +168,9 @@ $( document ).ready(function() {
 			if(curSlide>=(length-numSlides)){
 				$(this).css('visibility','hidden');
 			}
-			var len=$(this).parent().parent().children('.slides').children('.slide').length;
-			var start=$(this).parent().data('sc');
-			var end;
-			start+=1;
-			end=start+Math.floor(numSlides);
-			if(end<=len){
-				$(this).parent().children('.folNr').text(start+' bis '+end+' von '+ len);
-			}
 		}
 		//resetting bullets to right
-	});
+	});*/
 	// overlay on image click
 	$('.slide').on('click',function(){
 		$('.dim').addClass('overlay');
