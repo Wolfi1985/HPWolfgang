@@ -173,6 +173,7 @@ $( document ).ready(function() {
 	});*/
 	// overlay on image click
 	$('.slide').on('click',function(){
+		$('.slide').unbind("click");
 		$('.dim').addClass('overlay');
 		$('.over-div').css('visibility','visible');
 		$('.over-div').css('z-index','10');
@@ -199,5 +200,6 @@ $( document ).ready(function() {
 		$('.dim').removeClass('overlay');
 		$('.over-div').css('visibility','hidden');
 		$('.over-div').css('z-index','0');
+		$('.slide').bind("click");
 	});
 });
