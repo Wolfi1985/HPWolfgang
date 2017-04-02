@@ -12,21 +12,12 @@ body{
     margin: 0em;
     padding: 0em;
 	/*background-color:#c5d5cb;*/
-	background: #bdbdbd; /* For browsers that do not support gradients */
-    background: -webkit-linear-gradient(white,#bdbdbd); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(white, #bdbdbd); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(white, #bdbdbd); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(white, #bdbdbd); /* Standard syntax */
+	/*background: #2BC0E4; /* For browsers that do not support gradients */
+   /* background: -webkit-linear-gradient(#C4E0E5,#4CA1AF); /* For Safari 5.1 to 6.0 */
+  /*  background: -o-linear-gradient(#C4E0E5,#4CA1AF); /* For Opera 11.1 to 12.0 */
+   /* background: -moz-linear-gradient(#C4E0E5,#4CA1AF); /* For Firefox 3.6 to 15 */
+   /* background: linear-gradient(#C4E0E5,#4CA1AF); /* Standard syntax */
 	
-}
-.background{
-	transition: background-image 1s ease-in-out;
-    -webkit-transition: background-image 1s ease-in-out;
-    -moz-transition: background-image 1s ease-in-out;
-    -ms-transition: background-image 1s ease-in-out;
-	background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center center;  
 }
 div{
 	overflow:hidden;
@@ -129,7 +120,10 @@ main{
 	margin-left:auto;
 	margin-right:auto;
 	background-image: url('img/Front.jpg');
+	background-size: cover;
+	background-position: center center;
 }
+
 .leftArrow{
 	width: 70px;
     height: 90px;

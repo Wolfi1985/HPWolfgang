@@ -2,15 +2,13 @@
 	position:relative;
 	display:block;	/*IE only*/
 	width:1500px;
-	height:320px;
-	margin-top:20px;
+	height:300px;
+	margin-top:30px;
 	padding:0px;
 	padding-top:0px;
 	margin-left:auto;
 	margin-right:auto;
 	max-width: 1500px;
-	/*border-bottom: 1px solid #aaa;*/
-	background:white;	
 }
 .slides{
 	list-style-type: none;
@@ -45,34 +43,8 @@ h4{
 	padding:0px;
 }
 .pSlider p{
+	margin:6px;
 	text-align:center;
-}
-.bLeft{
-	display:inline-block;
-	width: 20px;
-    height: 20px;
-	float:left;
-    background: url("icons/left.png") center center no-repeat;
-    cursor: pointer;
-    transition: opacity ease .25s;
-	visibility:hidden;
-}
-.bRight{
-	display:inline-block;
-	width: 20px;
-    height: 20px;
-	float:right;
-    background: url("icons/right.png") center center no-repeat;
-    cursor: pointer;
-    transition: opacity ease .25s;
-}
-.slideMenu{
-	position: absolute;
-  	bottom: 0px;
-  	left: 50%;
-  	transform: translate(-50%, -50%);
-	height:30px;
-	width:600px;
 }
 .overlay {
   position: fixed;
@@ -104,53 +76,4 @@ h4{
 	height:100%;
 	width:auto;
 	left:50%;
-}
-/*Button*/
-
-.slideNav{
-	display:inline-block;
-	margin:0px;
-	padding:0px;
-	width:75%;
-	height:20px;
-  	transform: translate(10%, 0%);
-	text-align: center;
-}
-.folNr{
-	display: inline-block;
-	padding: 0px;
-	overflow:hidden;
-	width:75%;
-	height:90%;
-	transform: translate(10%, 0%);
-	text-align: center;
-}
-.folNr p{
-	margin:0px;
-	padding: 0px;
-}
-.slideMenu ul {
-	display: inline-block;
-	margin: 0px 0;
-	padding: 0px;
-	overflow:hidden
-}
-/* bullet*/
-.slideMenu li{
-	display: inline-block;
-	list-style-position: inside;
-	background: white;
-	list-style-position:inside;
-	list-style-type: disc;
-	border: 1px solid grey;
-    width: 6px;
-    height: 6px;
-	margin-left:6px;
-	border-radius:50%;
-}
-.activeBullet{
-	border: 5px solid grey;
-}
-li.inactiveBullet{
-	border: 1px solid grey;
 }
