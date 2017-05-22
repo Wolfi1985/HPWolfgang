@@ -91,15 +91,23 @@ $( document ).ready(function() {
 	});
 	// on second click set to background
 	$('.over-div').on('click',function(){
+		smaller();
+	});
+	$(document).keyup(function(e) {
+ 
+  		if (e.keyCode === 27) $('.cancel').click(smaller());   // esc
+	});
+	function smaller (){
 		$('.dim').removeClass('overlay');
 		$('.over-div').css('visibility','hidden');
 		$('.over-div').css('z-index','0');
 		$('.slide').bind("click");
-	});
+	};
 	$(window).on('popstate', function(event) {
  		$('.dim').removeClass('overlay');
 		$('.over-div').css('visibility','hidden');
 		$('.over-div').css('z-index','0');
 		$('.slide').bind("click");
 	});
+	
 });
